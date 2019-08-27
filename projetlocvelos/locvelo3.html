@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>locvelo3</title>
+    <link rel="stylesheet" type="text/css" href="locvelo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+        <div class="container-fluid">
+                <div class="row">
+                    <h2 class="col-md-4 ">
+                        ve<span class="text-danger">lo</span>cation
+                    </h2>
+                    <h2 class=" col-md-8 font-weight-bold text-primary">LOCATION</h2>
+                </div>
+        </div>
+        <div class="container">
+            <div class="row mt-4 mb-5">
+            <div class="col-md-8">Connecté en tant que : <span class="text-warning" id="affichuser"></span></div>
+            <div class="col-md-4">
+                <!-- <button type="button" class="btn btn-primary" id="deconnect">Déconnexion</button></div> -->
+                <a href="locvelo.html" class="btn btn-primary "  role="button">Déconnexion</a>
+        </div>
+     </div>
+     
+
+     <div class="container " style="background-color: #E6F4EA">
+         <div class="row pb-2">
+             <p class="ml-2">Abonnements</p>
+             <div class="col-md-6 offset-md-6">
+                    <div class="form-check">
+                      
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="reserv">Réservation d'un vélo pour 2 heures <span class="bg-warning">2€</span>
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="reserv">Journée  <span class="bg-warning">5€</span>
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="reserv" >Semaine  <span class="bg-warning">25€</span>
+                            </label>
+                          </div> 
+                          <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="reserv" >Mois  <span class="bg-warning">75€</span>
+                                </label>
+                              </div> 
+                            
+             </div>
+         </div>
+         
+
+     </div>
+
+     <div class="container mt-2">
+            <div class="row">
+                <p class="ml-2">Vélos:</p>
+                <div class="col-md-6 offset-md-6">
+                       <div class="form-check">
+                               <label class="form-check-label">
+                                 <input type="checkbox" class="form-check-input" name="velo">Electrique
+                               </label>
+                             </div>
+                             <div class="form-check">
+                               <label class="form-check-label">
+                                 <input type="checkbox" class="form-check-input" name="velo">VTT
+                               </label>
+                             </div>
+                             <div class="form-check">
+                               <label class="form-check-label">
+                                 <input type="checkbox" class="form-check-input" name="velo" >Sport
+                               </label>
+                             </div> 
+                             
+                             
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-2" style="background-color: #E6F4EA">
+                <div class="row pb-2">
+                    <p class="ml-2">Villes:</p>
+                    <div class="col-md-6 offset-md-6">
+                           <div class="form-check">
+                                   <label class="form-check-label">
+                                     <input type="checkbox" class="form-check-input" name="ville">Lille
+                                   </label>
+                                 </div>
+                                 <div class="form-check">
+                                   <label class="form-check-label">
+                                     <input type="checkbox" class="form-check-input" name="ville">Paris
+                                   </label>
+                                 </div>
+                                 <div class="form-check">
+                                   <label class="form-check-label">
+                                     <input type="checkbox" class="form-check-input" name="ville" >Bordeaux
+                                   </label>
+                                 </div> 
+                                 <div class="form-check">
+                                       <label class="form-check-label">
+                                         <input type="checkbox" class="form-check-input" name="ville" >Lion
+                                       </label>
+                                     </div> 
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container mt-1">
+                <p class="">Début de la location:  (date et heure (si réservation à l heure))</p>
+
+                <div class="colmd-8 offset-md-4">
+                <input type="date" name="dday">
+                <input type="time" name="usr_time">
+              </div>
+            </div>
+            <div class="container" >
+              <div class="row mt-5">
+            <button type="submit" class="btn btn-primary mx-auto w-25" id="click1">valider</button>
+          </div>
+        </div>
+
+        <div class="container mt-5" style="background-color: #D3EBF4">
+            <div class="affich1">
+                <u>Paiement</u>
+                <p>Somme due:</p>
+                <div class="container">
+                    <div class="row pb-2">
+                        <div class="col-md-6">
+                            Type de paiement:  <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio" id="cb" checked>CB
+                                    </label>
+                                  </div>
+                                  <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">PayPal
+                                    </label>
+                                  </div>
+
+                        </div>
+                        <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary mb-2" id="click2">valider le type</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="container mt-5 mb-4" style="background-color: #F2F2D7">
+            <div class="affich2">
+                    <div class="form-group">
+                            <label for="cardnumber">Numéro de carte:</label>
+                            <input type="text" class="form-control" id="cardnumber" name="number">
+                          
+                            <label for="validate">Date de validité:</label>
+                            <input type="date" class="form-control" id="validate" name="validatedate">
+
+                            <label for="picto">Pictogramme:</label>
+                            <input type="text" class="form-control" id="picto" name="pictogram">
+                        
+                        
+                        
+                        
+                        </div>   
+                        <button type="submit" class="btn btn-primary mb-2">valider le paiment</button>   
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script src="locvelo.js"></script>
+    
+</body>
+</html>
